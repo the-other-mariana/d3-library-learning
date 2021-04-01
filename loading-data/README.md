@@ -6,4 +6,4 @@
 
 ## Link
 
-- [Exercise 1](https://sites.google.com/up.edu.mx/d3-labs/exercises/exercise-3)
+- [Exercise 3](https://sites.google.com/up.edu.mx/d3-labs/exercises/exercise-3)
