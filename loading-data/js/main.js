@@ -24,7 +24,7 @@ d3.json("data/ages.json").then((data)=> {
 	data.forEach((d)=>{
 		d.age = +d.age;
 	});
-    var circs = svg.selectAll("circles").data(data);
+    var circs = svg.selectAll("circle").data(data);
     circs.enter()
         .append("circle")
             .attr("r", (person) => {
