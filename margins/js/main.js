@@ -5,10 +5,16 @@
 var gap = 20;
 var width = 40;
 
+var margin = {top: 10, right: 10, bottom: 100, left:100};
+var width = 600;
+var height = 400;
 var svg = d3.select("#chart-area")
-    .append("svg")
-    .attr("width", 500)
-    .attr("height", 500);
+	.append("svg")
+	.attr("width", width + margin.right + margin.left)
+	.attr("height", height + margin.top + margin.bottom);
+
+var g = svg.append("g")
+    .attr("transform", "translate(" + margin.left + ", " + margin.top + ")");
 
 d3.json("data/buildings.json").then((data)=> {
     
