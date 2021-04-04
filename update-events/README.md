@@ -1,9 +1,9 @@
-# Star Lion Brewery
+# Update Events
 
 ## Output
 
-![image](https://github.com/the-other-mariana/d3-library-learning/blob/master/p1-brewery/capture.png?raw=true)
+![image](https://github.com/the-other-mariana/d3-library-learning/blob/master/update-events/capture.gif)
 
 ## Link
 
-- [Project 1](https://sites.google.com/up.edu.mx/d3-labs/exercises/project-1)
+- [Exercise 6](https://sites.google.com/up.edu.mx/d3-labs/exercises/exercise-6)
