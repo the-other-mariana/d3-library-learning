@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <title>Leaf Project</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom styling -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        path.domain  {
+            stroke: white;
+        }
+       .tick text {
+            font: 12px sans-serif;
+            fill:white;
+        }
+        line {
+            stroke: white;
+        }
+        text {
+            fill: white;
+        }
+    </style>
+</head>
+
+<body style="background-color: #000000;">
+    <nav class="navbar navbar-default" style="background-color:white; height: 80px; opacity: 0.7;">
+        <div class="container" >
+            <a class="navbar-brand" href="#"><img id="logo" src="img/logo-leaf.png" style="height: 60px;"></a>      
+        </div>
+    </nav>
+
+    <!-- Bootstrap grid setup -->
+    <div class="container">
+        <div class="row">
+            <div id="chart-area"></div>  
+        </div>
+    </div>
+
+<!-- External JS libraries -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/d3.min.js"></script>
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
