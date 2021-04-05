@@ -79,28 +79,7 @@ var legendArea = g.append("text")
 
 
 
-function step(){
 
-	update(years[k % years.length], formattedData[k % years.length]);
-	console.log("Event Handlers Update...");
-	k += 1;
-
-}
-
-$("#play-button").on("click", ( ) => {
-	
-	var button = $("#play-button");
-	if (button.text() == "Play"){
-		console.log("Play case");
-		button.text("Pause");
-		interval = setInterval(step, 1000);
-	} else if (button.text() == "Pause"){
-		console.log("Pause case");
-		button.text("Play");
-		clearInterval(interval);
-	}
-
-});
 
 
 d3.json("data/data.json").then((data)=>{
@@ -149,10 +128,16 @@ d3.json("data/data.json").then((data)=>{
 });
 
 
-
-
-
 function update(year, data) {
+
+	var continent = $("#continent-select").val();
+	var data = data.filter((d) => {
+		if (continent == "all") { return true; }
+		else {
+			return d.continent == continent;
+		}
+	});
+
 	legendArea.text(year);
 	xAxisGroup.call(bottomAxis)
     .selectAll("text")
@@ -222,3 +207,31 @@ function update(year, data) {
 			});
 }
 
+function step(){
+
+	update(years[k % years.length], formattedData[k % years.length]);
+	console.log("Event Handlers Update...");
+	k += 1;
+
+}
+
+$("#play-button").on("click", ( ) => {
+	
+	var button = $("#play-button");
+	if (button.text() == "Play"){
+		console.log("Play case");
+		button.text("Pause");
+		interval = setInterval(step, 1000);
+	} else if (button.text() == "Pause"){
+		console.log("Pause case");
+		button.text("Play");
+		clearInterval(interval);
+	}
+
+});
+
+$("#continent-select").on("change", ( ) => {
+
+	update(years[k % years.length], formattedData[k % years.length]);
+
+});

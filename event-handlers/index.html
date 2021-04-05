@@ -36,7 +36,22 @@
     <!-- Bootstrap grid setup -->
     <div class="container">
         <div class="row">
-            <button id="play-button" class="btn btn-primary">Play</button>
+            <div class="col-sm-4">
+                <button id="play-button" class="btn btn-primary" style="display: inline;">Play</button>
+            </div>
+            <div class="col-sm-4">
+                <select id="continent-select" class="form-control">
+                    <option selected value="all">All</option>
+                    <option value="europe">Europe</option>
+                    <option value="asia">Asia</option>
+                    <option value="americas">Americas</option>
+                    <option value="africa">Africa</option>
+                
+                </select>
+            </div>
+            <div class="col-sm-4">
+
+            </div>
         </div>
         <div class="row">
             <div id="chart-area"></div>  
