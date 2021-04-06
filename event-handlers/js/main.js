@@ -253,6 +253,11 @@ $("#play-button").on("click", ( ) => {
 
 });
 
+$("#reset-button").on("click", ( ) => {
+	k = 0;
+	console.log("Reset!");
+});
+
 $("#continent-select").on("change", ( ) => {
 	update(years[k % years.length], formattedData[k % years.length], time);
 });
