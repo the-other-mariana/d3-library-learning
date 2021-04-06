@@ -9,8 +9,10 @@ var k = 0;
 var formattedData = [];
 var years = [];
 var interval;
+var time = 0;
 
 var t = d3.transition().duration(1000);
+
 
 var g = d3.select("#chart-area")
 	.append("svg")
@@ -123,12 +125,14 @@ d3.json("data/data.json").then((data)=>{
 			.text(c);
 		 });
 	
-	update(years[k % years.length], formattedData[k % years.length]);
-	k += 1;
+	update(years[k % years.length], formattedData[k % years.length], time);
 });
 
 
-function update(year, data) {
+function update(year, data, time) {
+
+	var idx = $("#date-slider").slider("value");
+	year = years[idx];
 
 	var continent = $("#continent-select").val();
 	var data = data.filter((d) => {
@@ -138,7 +142,7 @@ function update(year, data) {
 		}
 	});
 
-	legendArea.text(year);
+	legendArea.text(idx);
 	xAxisGroup.call(bottomAxis)
     .selectAll("text")
     .attr("y", "10")
@@ -205,11 +209,13 @@ function update(year, data) {
 			.attr("r", (d)=>{
 				return Math.sqrt(area(d.population) / Math.PI);
 			});
+	$("#date-slider").slider("value", +(k + 1800));
+	$("#year")[0].innerHTML = +(idx);
 }
 
 function step(){
 
-	update(years[k % years.length], formattedData[k % years.length]);
+	update(years[k % years.length], formattedData[k % years.length], time);
 	console.log("Event Handlers Update...");
 	k += 1;
 
@@ -231,7 +237,16 @@ $("#play-button").on("click", ( ) => {
 });
 
 $("#continent-select").on("change", ( ) => {
+	update(years[k % years.length], formattedData[k % years.length], time);
+});
 
-	update(years[k % years.length], formattedData[k % years.length]);
-
+$("#date-slider").slider({
+	max: 2014, 
+	min: 1800, 
+	step: 1,
+	slide:(event, ui) => {
+		k = ui.value - 1800;
+		console.log(k);
+		update(years[k % years.length], formattedData[k % years.length], time);
+	}
 });

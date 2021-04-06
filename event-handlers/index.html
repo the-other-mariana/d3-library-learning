@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Custom styling -->
     <link rel="stylesheet" href="css/style.css">
+    <link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css' rel='stylesheet' type='text/css'>
     <style>
         path.domain  {
             stroke: white;
@@ -24,6 +25,7 @@
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 </head>
 
 <body style="background-color: #000000;">
@@ -36,7 +38,7 @@
     <!-- Bootstrap grid setup -->
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-2">
                 <button id="play-button" class="btn btn-primary" style="display: inline;">Play</button>
             </div>
             <div class="col-sm-4">
@@ -46,12 +48,15 @@
                     <option value="asia">Asia</option>
                     <option value="americas">Americas</option>
                     <option value="africa">Africa</option>
-                
                 </select>
             </div>
-            <div class="col-sm-4">
-
+            <div class="col-sm-6">
+                
             </div>
+        </div>
+        <div id="slider-div">
+            <label style="color: white;">Year: <span id="year">1800 </span></label>
+            <div id="date-slider" max=2014 min=1800 step=1></div>
         </div>
         <div class="row">
             <div id="chart-area"></div>  
@@ -60,10 +65,10 @@
 
 <!-- External JS libraries -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/d3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <!-- Custom JS -->
 <script src="js/main.js"></script>
 
