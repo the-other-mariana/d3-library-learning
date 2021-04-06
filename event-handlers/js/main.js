@@ -77,12 +77,7 @@ var legendArea = g.append("text")
 	.attr("y", height - 20)
 	.attr("font-size", "50px")
 	.attr("text-anchor", "middle")
-	.attr("fill", "gray")
-
-
-
-
-
+	.attr("fill", "gray");
 
 d3.json("data/data.json").then((data)=>{
 	console.log(data);
@@ -126,6 +121,7 @@ d3.json("data/data.json").then((data)=>{
 		 });
 	
 	update(years[k % years.length], formattedData[k % years.length], time);
+	k += 1;
 });
 
 
@@ -141,6 +137,25 @@ function update(year, data, time) {
 			return d.continent == continent;
 		}
 	});
+
+	var tip = d3.tip()
+	.attr('class', 'd3-tip')
+	.html((d) => { 
+		var text = "<strong>Country:</strong>";
+		text += "<span style='color:orange'> " + d.country + "</span><br>";
+		text += "<strong>Continent:</strong> ";
+		text += "<span style='color:orange;text-transform:capitalize'>" + d.continent + "</span><br>";
+		text += "<strong>Life Expectancy:</strong>";
+		text += "<span style='color:orange'>" + d3.format(".2f")(d.life_exp) + "</span><br>";
+		text += "<strong>GDP Per Capita:</strong>";
+		text += "<span style='color:orange'>" + d3.format("$,.0f")(d.income) + "</span><br>";
+		text += "<strong>Population:</strong>";
+		text += "<span style='color:orange'>" + d3.format(",.0f")(d.population) + "</span><br>";
+
+		return text;
+	 });
+
+	g.call(tip);
 
 	legendArea.text(idx);
 	xAxisGroup.call(bottomAxis)
@@ -189,6 +204,8 @@ function update(year, data, time) {
 		.attr("fill", (d) => {
 			return color(d.continent)
 		})
+		.on("mouseover", tip.show)
+		.on("mouseout", tip.hide)
 		.attr("cx", (d) => {
 			return x(d.income);
 		})
