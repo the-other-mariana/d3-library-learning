@@ -44,7 +44,7 @@
                 <button id="play-button" class="btn btn-primary" style="display: inline;">Play</button>
                 <button id="reset-button" class="btn btn-primary" style="display: inline;">Reset</button>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-2">
                 <select id="continent-select" class="form-control">
                     <option selected value="all">All</option>
                     <option value="europe">Europe</option>
@@ -53,14 +53,14 @@
                     <option value="africa">Africa</option>
                 </select>
             </div>
-            <div class="col-sm-6">
-                
+            <div class="col-sm-8">
+                <div id="slider-div">
+                    <label style="color: white;">Year: <span id="year">1800 </span></label>
+                    <div id="date-slider" max=2014 min=1800 step=1></div>
+                </div>
             </div>
         </div>
-        <div id="slider-div">
-            <label style="color: white;">Year: <span id="year">1800 </span></label>
-            <div id="date-slider" max=2014 min=1800 step=1></div>
-        </div>
+        
         <div class="row">
             <div id="chart-area"></div>  
         </div>

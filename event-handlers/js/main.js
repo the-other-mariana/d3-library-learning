@@ -260,6 +260,7 @@ $("#reset-button").on("click", ( ) => {
 
 $("#continent-select").on("change", ( ) => {
 	update(years[k % years.length], formattedData[k % years.length], time);
+	k += 1;
 });
 
 $("#date-slider").slider({
@@ -270,5 +271,6 @@ $("#date-slider").slider({
 		k = ui.value - 1800;
 		console.log(k);
 		update(years[k % years.length], formattedData[k % years.length], time);
+		k += 1;
 	}
 });
