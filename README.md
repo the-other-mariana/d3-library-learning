@@ -9,18 +9,32 @@ Python version: `3.6.2` <br />
 ## Exercises
 
 - **Exercise 1**: [d3 fundamentals](https://github.com/the-other-mariana/d3-library-learning/tree/master/d3-fundamentals)
+
 - **Exercise 2**: [data binding](https://github.com/the-other-mariana/d3-library-learning/tree/master/data-binding)
+
 - **Exercise 3**: [loading data](https://github.com/the-other-mariana/d3-library-learning/tree/master/loading-data)
+
 - **Challenge 1**: [buildings of the world](https://github.com/the-other-mariana/d3-library-learning/tree/master/challenge-1)
+
 - **Exercise 4**: [scales](https://github.com/the-other-mariana/d3-library-learning/tree/master/scales)
+
 - **Exercise 5**: [margins, groups, axes and labels](https://github.com/the-other-mariana/d3-library-learning/tree/master/margins)
+
 - **Project 1**: [star lion brewery](https://github.com/the-other-mariana/d3-library-learning/tree/master/p1-brewery)
+
 - **Exercise 6**: [update events](https://github.com/the-other-mariana/d3-library-learning/tree/master/update-events)
+
 - **Exercise 7**: [transitions](https://github.com/the-other-mariana/d3-library-learning/tree/master/transitions)
+
 - **Project 2**: [leaf project](https://github.com/the-other-mariana/d3-library-learning/tree/master/p2-leaf-project)
+
 - **Exercise 8**: [event handlers](https://github.com/the-other-mariana/d3-library-learning/tree/master/event-handlers)
+
 - **Exercise 9**: [line chart](https://github.com/the-other-mariana/d3-library-learning/tree/master/line-chart)
+
 - **Exercise 10**: [area chart](https://github.com/the-other-mariana/d3-library-learning/tree/master/area-chart)
+
+- **Exercise 11**: [stacked chart](https://github.com/the-other-mariana/d3-library-learning/tree/master/stacked-chart)
 
 
 ## Usage
