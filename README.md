@@ -4,7 +4,7 @@ This repo contains the process of learning Javascript's d3 library. <br />
 
 ## Specifications
 
-Python version: `3.6.2` <br />
+Python version: `3.8.1` <br />
 
 ## Exercises
 
@@ -36,6 +36,8 @@ Python version: `3.6.2` <br />
 
 - **Exercise 11**: [stacked chart](https://github.com/the-other-mariana/d3-library-learning/tree/master/stacked-chart)
 
+- **Exercise 12**: [pie arc chart](https://github.com/the-other-mariana/d3-library-learning/tree/master/pie-arc-chart)
+
 
 ## Usage
 
@@ -56,3 +58,7 @@ $: Serving HTTP on :: port 8000 (http://[::]:8000/) ...
 5. The server is running. Now, go to `http://localhost:8000/` in chrome web browser. <br/>
 
 6. To stop the server, type `Ctrl+C`.
+
+## Tip
+
+To avoid cache, which might render past versions of the scripts, type `Shift + F5` to refresh in the browser. 
